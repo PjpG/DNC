@@ -1,0 +1,13 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <% if @intro_page %>
+        <li class="active"><%= link_to "About", about_path%></li>
+      <% else %>
+        <li><%= nav_link("About", about_path) %></li>
+      <% end %>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div>
+</div>
