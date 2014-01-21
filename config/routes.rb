@@ -1,5 +1,7 @@
 Dnc::Application.routes.draw do
   
+  resources :members
+
   root to: 'info#intro'
   
   get 'about' => 'info#about', as: 'about'
