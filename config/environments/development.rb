@@ -26,4 +26,12 @@ Dnc::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  # Set environment variables for paperclip-dropbox
+  config = YAML.load(File.read(Rails.root.join("config/settings.yml"))) || {}
+  config.merge! config.fetch(Rails.env, {})
+  config.each do |key, value|
+    ENV[key] = value.to_s unless value.is_a?(Hash)
+  end
+  
 end
