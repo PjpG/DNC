@@ -24,5 +24,10 @@
   <strong>Picture</strong>
   <%= image_tag @member.picture.url(:original) %>
 </p>
+<p>
+  <strong>Cover Photo</strong>
+  <%= image_tag @member.cover_photo.url(:original) %>
+</p>
+
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>

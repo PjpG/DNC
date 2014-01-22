@@ -1,5 +1,6 @@
 <% @members.each do |member| %>
   <div class="span12">
+    <%= image_tag(member.cover_photo.url(:original))%>
     <div class="span6">
       <p><%= image_tag(member.picture.url(:original))%></p>
       <h2><%= member.first_name %> "<%= member.nickname %>" <%= member.last_name %> </h2>
