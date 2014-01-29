@@ -1,20 +1,35 @@
-<% @members.each do |member| %>
+<!-- <%# @members.each do |member| %>
   <div class="span12">
-    <%= image_tag(member.cover_photo.url(:original))%>
+    <%#= image_tag(member.cover_photo.url(:original)) if member.cover_photo.present? %> 
     <div class="span6">
-      <p><%= image_tag(member.picture.url(:original))%></p>
-      <h2><%= member.first_name %> "<%= member.nickname %>" <%= member.last_name %> </h2>
+      <p><%#= image_tag(member.picture.url(:original)) if member.picture.present? %></p>
+      <h2><%#= member.first_name %> "<%#= member.nickname %>" <%#= member.last_name %> </h2>
     </div>
     <div class="span5">
-      <p><%= member.description %></p>
+      <p><%#= member.description %></p>
       <br>
-      <td><%= link_to 'Show', member %></td>
-      <td><%= link_to 'Edit', edit_member_path(member) %></td>
-      <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%#= link_to 'Show', member %></td>
+      <td><%#= link_to 'Edit', edit_member_path(member) %></td>
+      <td><%#= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     
       
     </div>
   </div>
-<% end %>
-<br>
+<%# end %>
+<br> -->
 <%= link_to 'New Member', new_member_path %>
+<% @members.each do |member| %>
+  <section class="story" id="<%= member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed;">
+    <div data-type="sprite" data-offsetY="950" data-Xposition="25%" data-speed="2"></div>
+    <article>
+      <div>
+        <a class="nav top" href="#<%= (member.id - 1).to_words %>"><%= image_tag("arrow-top.png") %></a>
+        <h1><%= member.first_name %> "<%= member.nickname %>" <%= member.last_name %></h1>
+        <div class="text">
+          <p><%= member.description %></p>
+        </div>
+      <a class="nav down" href="#<%= (member.id + 1).to_words %>"><%= image_tag("arrow-down.png") %></a>
+      </div>
+    </article>
+  </section>
+<% end %>
