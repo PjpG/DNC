@@ -37,11 +37,12 @@ group :production do
   gem 'pg'
   gem 'thin'
   gem 'rails_12factor'
+  gem 'therubyracer-heroku'
 end
 
 
 # Bootstrap
-gem "therubyracer"
+gem 'therubyracer', "0.12.0"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
