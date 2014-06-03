@@ -13,15 +13,27 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 
 
 $(document).ready(function(){
+  $('.container.team .loader').hide();
   $('.container.team a[href^="#"]').click(function() {
       $('html,body').animate({ scrollTop: $(this.hash).offset().top}, 1000);
       return false;
       e.preventDefault();
   });
   
+  if ($(".container.team .story")[0]) {
+    $('body').on({
+    'mousewheel': function(e) {
+        if (e.target.id == 'el') return;
+        e.preventDefault();
+        e.stopPropagation();
+        }
+    })  
+    
+  }
 });
+
