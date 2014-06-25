@@ -27,6 +27,9 @@ Dnc::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   
+  # Mailer settings for devise
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  
   # Set environment variables for paperclip-dropbox
   config = YAML.load(File.read(Rails.root.join("config/settings.yml"))) || {}
   config.merge! config.fetch(Rails.env, {})

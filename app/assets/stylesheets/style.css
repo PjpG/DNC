@@ -97,8 +97,7 @@ li.active_link {
 
 
 h1 {
-  color: #4a4b4a;
-  border-bottom: 1px solid #b6b7b9;
+  color: #fff;
 }
 /*#second h1, #third h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -121,8 +120,8 @@ h1 {
 .story div {
   width: 100%;
   font-weight: bolder;
-  background-color: rgba(255, 255, 255, .8);
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, .8);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 

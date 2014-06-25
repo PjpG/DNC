@@ -1,33 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @member.first_name %>
-</p>
-
-<p>
-  <strong>Nickname:</strong>
-  <%= @member.nickname %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @member.last_name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @member.description %>
-</p>
-
-<p>
-  <strong>Picture</strong>
-  <%= image_tag @member.picture.url(:original) %>
-</p>
-<p>
-  <strong>Cover Photo</strong>
-  <%= image_tag @member.cover_photo.url(:original) %>
-</p>
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<section class="story" id="<%= @member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= @member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed; background-size: 120%;">
+  <div data-type="sprite" data-offsetY="950" data-Xposition="25%" data-speed="2"></div>
+  <article>
+    <div>
+      <div class="avatar">
+        <%= image_tag @member.picture.url(:small) %>
+      </div>
+      <h1><%= @member.first_name %> "<%= @member.nickname %>" <%= @member.last_name %></h1>
+      <span>
+        <%= link_to 'Edit', edit_member_path(@member) %> |
+        <%= link_to 'Back', members_path %>
+      </span>
+      
+      <div class="text">
+        <p><%= @member.description %></p>
+      </div>
+    </div>
+  </article>
+</section>

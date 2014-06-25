@@ -1,5 +1,7 @@
 Dnc::Application.routes.draw do
   
+  devise_for :users, controllers: { registrations: 'users/registrations'}
+
   resources :members
 
   root to: 'info#intro'

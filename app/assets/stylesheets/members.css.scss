@@ -8,14 +8,24 @@
     background-size: 110%;    
   }
   article {
-    color: #000;
+    color: #fff;
     div {
+      &.container {
+        padding: 0;
+      }
       .text {
+        float: right;
         box-shadow: none;
         background-color: transparent;
         p {
           background-color: transparent;
           font-size: 15px;
+          text-align: justify;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 14px;
+          padding-left: 10px;
         }
       }
       .nav {
@@ -43,9 +53,7 @@
   }
   .avatar {
     width: 25%;
-    position: absolute;
-    top: 15px;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 10px 10px 10px black;
     padding: 0;
     margin-bottom: 15px;
     margin-left: 25px;

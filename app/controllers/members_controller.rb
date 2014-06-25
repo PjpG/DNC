@@ -4,7 +4,7 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    @members = Member.with_user
   end
 
   # GET /members/1
@@ -24,8 +24,9 @@ class MembersController < ApplicationController
   # POST /members
   # POST /members.json
   def create
+    @users = User.all 
     @member = Member.new(member_params)
-
+    assing_user_to_member(@member, @users)
     respond_to do |format|
       if @member.save
         format.html { redirect_to @member, notice: 'Member was successfully created.' }
@@ -69,6 +70,15 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:first_name, :nickname, :last_name, :description, :picture, :cover_photo)
+      params.require(:member).permit(:first_name, :nickname, :last_name, :description, :picture, :cover_photo, :user_id)
     end
+    
+    def assing_user_to_member(member, users)
+      if users.count != 0
+        user = users.last 
+        member.user_id = user.id if member.user_id == nil
+        member.save
+      end
+    end
+    
 end
