@@ -7,8 +7,8 @@
       <div class="text">
         <p><%= @member.description %></p>
         <span>
-          <%= link_to 'Edit', edit_member_path(@member) %> |
-          <%= link_to 'Back', members_path %>
+          <%= link_to 'Edit', edit_member_path(@member), class: "button" %>
+          <%= link_to 'Back', members_path, class: "button" %>
         </span>
       </div>
       <div class="avatar"><%= image_tag @member.picture.url(:small) %></div>

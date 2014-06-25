@@ -12,20 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
+    <%= f.label :first_name %>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :nickname %><br>
+    <%= f.label :nickname %>
     <%= f.text_field :nickname %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
+    <%= f.label :last_name %>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
     <%= f.label :picture %>
     <%= f.file_field :picture %>
+    <% if @member.picture.present? %>
+      <%= image_tag @member.picture.url(:small) %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :cover_photo %>
@@ -33,10 +36,10 @@
   </div>
   
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Update", :class => "button" %>
   </div>
 <% end %>

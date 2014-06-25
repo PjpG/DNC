@@ -1,0 +1,59 @@
+.story {
+  .form-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 10px 10px 10px black;
+    h1 {
+      width: 100%;
+    }
+    .cancel-button {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+  form {
+    .field, .actions {
+      background: transparent;
+      margin-bottom: 0;
+      box-shadow: none;
+      color: rgb(255, 255, 255);
+      img {
+        width: 50px;
+      }
+    }
+    
+    label {
+      width: 137px;
+      float: left;
+      margin-right: 20px;
+      display: block;
+      text-align: right;
+    }
+    textarea {
+      height: 100px;
+    }
+    input {
+      font-size: 16px;
+      line-height: 1.35rem;
+      padding: 0 1%;
+    }
+    input[type="file"] {
+      width: 210px;
+    }
+    input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea {
+      width: 310px;
+      display: block;
+      margin-top: 0;
+    }
+    .actions {
+      width: 100%;
+      text-align: center;
+      input[type="submit"] {
+        width: 70%;
+        margin-top: 10px;
+      }
+    }
+  }
+}

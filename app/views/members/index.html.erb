@@ -14,7 +14,7 @@
           <p><%= member.description %></p>
           <% if member.user == current_user %>
             <span>
-              <%= link_to 'Edit', edit_member_path(member) %>
+              <%= link_to 'Edit', edit_member_path(member), class: "button" %>
             </span>
           <% end %>
         </div>
