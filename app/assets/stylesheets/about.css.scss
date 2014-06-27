@@ -1,24 +1,13 @@
 .row.about {
-
-  margin-left: 0;
-  
-
-  .band_photo {
-    .span12 {
-      text-align: center;
-      img {
-        width: 90%;
-        -webkit-box-shadow: 4px 4px 10px rgba(50, 50, 50, 0.79);
-        -moz-box-shadow:    4px 4px 10px rgba(50, 50, 50, 0.79);
-        box-shadow:         4px 4px 10px rgba(50, 50, 50, 0.79);
-      }
-    }
-  }
-  .text {
+  margin-top: 300px;
+  .span12 {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 10px 20px 10px 20px;
     p {
-      font-size: 1.5em;
-      margin-top: 1.5em;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      text-align: justify;
     }
   }
 }
-
