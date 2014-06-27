@@ -16,5 +16,11 @@
 /tmp
 
 
+
 /.rvmrc
 /.powrc
+
+# Ignore secret config variables files
+/config/database.yml
+/config/settings.yml
+

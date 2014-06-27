@@ -7,5 +7,8 @@ module ApplicationHelper
     end
     content_tag :li, link_to(name, path), :class => css
   end
-  
+
+  def decide_css_class
+    css_class = "team" if controller.class == MembersController || controller.class == Users::RegistrationsController || controller.class == Devise::SessionsController
+  end
 end

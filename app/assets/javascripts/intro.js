@@ -5,14 +5,3 @@ $(document).ready(function(){
     $('.navbar').slideDown(1000);
   });
 });
-
-
-
-
-
-// $('.intro').find('button').on('click', function(){
-
-//   $('.after_click').show();
-// });
-
-  

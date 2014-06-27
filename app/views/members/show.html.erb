@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<section class="story" id="<%= @member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= @member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed; background-size: 120%;">
+  <div data-type="sprite" data-offsetY="950" data-Xposition="25%" data-speed="2"></div>
+  <article>
+    <div class="container">
+      <div class="text">
+        <p><%= @member.description %></p>
+        <span>
+          <%= link_to 'Edit', edit_member_path(@member), class: "button" %>
+          <%= link_to 'Back', members_path, class: "button" %>
+        </span>
+      </div>
+      <div class="avatar"><%= image_tag @member.picture.url(:small) %></div>
+      <h1><%= @member.nickname %></h1>
+    </div>
+  </article>
+</section>
