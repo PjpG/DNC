@@ -1,0 +1,11 @@
+<div class="container team">
+  <section class="story edit" data-speed="8" data-type="background" style="<%= editing_background_image(@member) %> 50% 0 no-repeat fixed; background-size: 100%;">
+    <div class="form-container">
+      <h1>Editing <%= @member.nickname %></h1>
+      <%= render 'form' %>
+      <p class="cancel-button">
+        <%= link_to 'Cancel', members_path, class: "button cancel", data: { confirm: "Are you sure? All changes will be lost!" } %>  
+      </p>
+    </div>
+  </section>
+</div>
