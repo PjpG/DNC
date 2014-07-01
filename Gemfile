@@ -16,12 +16,10 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-group :assets do
-  gem 'therubyracer', platforms: 'ruby'
-end
-
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+group :assets do
+  gem 'therubyracer', platforms: :ruby
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -41,7 +39,6 @@ group :production do
   gem 'pg'
   gem 'thin'
   gem 'rails_12factor'
-  gem 'therubyracer-heroku'
 end
 
 
