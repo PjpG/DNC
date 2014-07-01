@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/jetthoughts/yaml_db.git
+  revision: fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba
+  ref: fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba
+  specs:
+    yaml_db (0.2.3)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 95de3b0e288aede73d38a18cce30cde66e733558
   specs:
@@ -83,6 +90,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    mysql2 (0.3.16)
     numbers_and_words (0.10.0)
       activesupport
       i18n
@@ -95,7 +103,6 @@ GEM
     paperclip-dropbox (1.2.2)
       dropbox-sdk (~> 1.3)
       paperclip (>= 3.1, < 5)
-    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -140,7 +147,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.9)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -172,16 +178,16 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  mysql2
   numbers_and_words
   paperclip-dropbox (>= 1.1.7)
-  pg
   rails (= 4.0.1)
   rails_12factor
   sass-rails (~> 4.0.0)
   sdoc
-  sqlite3
   therubyracer
   thin
   turbolinks
   twitter-bootstrap-rails!
   uglifier (>= 1.3.0)
+  yaml_db!
