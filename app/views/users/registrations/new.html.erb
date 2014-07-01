@@ -1,0 +1,30 @@
+<div class="container team">
+  <section class="story edit" data-speed="8" data-type="background" style="<%= editing_background_image(@member) %> 50% 0 no-repeat fixed; background-size: 100%;">
+    <div class="form-container">
+      <h1>Sign up</h1>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "button" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

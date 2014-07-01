@@ -1,0 +1,29 @@
+<div class="loader">
+  <span>Loading profiles, please wait</span>
+</div>
+<%= link_to 'New Member', new_member_path %>
+<% @members.each do |member| %>
+  <section class="story" id="<%= member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed; background-size: 120%;">
+    <div data-type="sprite" data-offsetY="950" data-Xposition="25%" data-speed="2"></div>
+    <article>
+      <div class="container">
+        <% if member.previous %>
+          <a class="nav top" href="#<%= (member.id - 1).to_words %>"><%= image_tag("arrow-top.png") %></a>
+        <% end %>
+        <div class="text">
+          <p><%= member.description %></p>
+          <% if member.user == current_user %>
+            <span>
+              <%= link_to 'Edit', edit_member_path(member), class: "button" %>
+            </span>
+          <% end %>
+        </div>
+        <div class="avatar"><%= image_tag member.picture.url(:small) %></div>
+        <h1><%= member.nickname %></h1>
+      <% if member.next %>  
+        <a class="nav down" href="#<%= (member.id + 1).to_words %>"><%= image_tag("arrow-down.png") %></a>
+      <% end %>
+      </div>
+    </article>
+  </section>
+<% end %>
