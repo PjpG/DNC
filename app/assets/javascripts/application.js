@@ -24,16 +24,5 @@ $(document).ready(function(){
       return false;
       e.preventDefault();
   });
-  
-  if ($(".container.team .story")[0]) {
-    $('body').on({
-    'mousewheel': function(e) {
-        if (e.target.id == 'el') return;
-        e.preventDefault();
-        e.stopPropagation();
-        }
-    })  
-    
-  }
 });
 
