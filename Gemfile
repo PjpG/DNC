@@ -6,6 +6,7 @@ gem 'rails', '4.0.1'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
+  gem 'therubyracer'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -42,7 +43,6 @@ end
 
 
 # Bootstrap
-gem 'therubyracer', "0.12.0"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 

@@ -181,7 +181,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
-  therubyracer (= 0.12.0)
+  therubyracer
   therubyracer-heroku
   thin
   turbolinks
