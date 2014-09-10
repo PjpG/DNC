@@ -1,5 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-
+  prepend_before_filter :require_no_authentication, only: [:cancel]
   def create
     @user = User.new(user_params)
     respond_to do |format|
