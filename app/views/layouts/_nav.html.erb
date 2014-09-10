@@ -1,17 +1,13 @@
 <div class="navbar">
   <div class="navbar-inner">
     <ul class="nav">
-      <% if @intro_page %>
-        <li class="active"><%= link_to "About", about_path%></li>
-      <% else %>
-        <li><%= nav_link("About", about_path) %></li>
-      <% end %>
+      <li><%= nav_link("About", about_path) %></li>
       <li><%= nav_link("Team", members_path)%></li>
       <% if user_signed_in? %>
-        <li><%= nav_link("My profile", member_path(current_user.member)) %></li>
+        <li><%= nav_link("Add a new member", new_user_registration_path) %></li>
+        <li><%= nav_link("My profile", member_path(current_user.member)) if current_user.member.present? %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= nav_link("Sign up", new_user_registration_path) %></li>
         <li><%= nav_link("Login", new_user_session_path) %></li>
       <% end %>
     </ul>
