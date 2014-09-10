@@ -8,7 +8,7 @@
     <article>
       <div class="container">
         <% if member.previous %>
-          <a class="nav top" href="#<%= (member.id - 1).to_words %>"><%= image_tag("arrow-top.png") %></a>
+          <a class="nav top" href="#<%= member.previous.id.to_words %>"><%= image_tag("arrow-top.png") %></a>
         <% end %>
         <div class="text">
           <p><%= member.description %></p>
@@ -21,7 +21,7 @@
         <div class="avatar"><%= image_tag member.picture.url(:small) %></div>
         <h1><%= member.nickname %></h1>
       <% if member.next %>  
-        <a class="nav down" href="#<%= (member.id + 1).to_words %>"><%= image_tag("arrow-down.png") %></a>
+        <a class="nav down" href="#<%= member.next.id.to_words %>"><%= image_tag("arrow-down.png") %></a>
       <% end %>
       </div>
     </article>
