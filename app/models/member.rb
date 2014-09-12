@@ -2,7 +2,7 @@ class Member < ActiveRecord::Base
   has_attached_file :picture,
       storage: :dropbox,
       dropbox_credentials: Rails.root.join("config/dropbox.yml"),
-      styles: { small: "720x560>" }
+      styles: { small: "400x380>" }
 
   has_attached_file :cover_photo,
       storage: :dropbox,

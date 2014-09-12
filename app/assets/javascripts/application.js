@@ -18,7 +18,9 @@
 
 
 $(document).ready(function(){
-  $('.container.team .loader').hide();
+  $(window).load(function() {
+    $('.container.team .loader').hide();
+  });
   $('.container.team a[href^="#"]').click(function() {
       $('html,body').animate({ scrollTop: $(this.hash).offset().top}, 1000);
       return false;
