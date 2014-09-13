@@ -47,7 +47,7 @@ UserScrollDisabler.prototype = {
 var disabler = new UserScrollDisabler();
 
 $(document).ready(function(){
-  if ($('.container.team .story')[0]) {
-    disabler.disable_scrolling();    
-  }
+  if ($('.container.team .story.non-scroll')[0]) {
+    disabler.disable_scrolling();
+  }    
 });

@@ -3,7 +3,7 @@
 </div>
 <%= link_to 'New Member', new_member_path %>
 <% @members.each do |member| %>
-  <section class="story" id="<%= member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed; background-size: 120%;">
+  <section class="story non-scroll" id="<%= member.id.to_words %>" data-speed="8" data-type="background" style="background: url(<%= member.cover_photo.url(:big) %>) 50% 0 no-repeat fixed; background-size: 120%;">
     <div data-type="sprite" data-offsetY="950" data-Xposition="25%" data-speed="2"></div>
     <article>
       <div class="container">
